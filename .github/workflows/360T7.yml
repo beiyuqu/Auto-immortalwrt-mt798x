@@ -19,14 +19,14 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: false
+        required: true
         default: 'false'
 #  schedule:
 #   - cron: 0 20 * * 2
    #   分,时,日,月,星期。每周 三 20时执行一次 (UTC时间)
   
 env:
-  REPO_URL: https://github.com/benboguan/immortalwrt-mt798x
+  REPO_URL: https://github.com/beiyuqu/immortalwrt-mt798x
   REPO_BRANCH: mt798x-scripts
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/360T7.config
