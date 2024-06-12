@@ -19,7 +19,7 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: true
+        required: false
         default: 'false'
 #  schedule:
 #   - cron: 0 20 * * 2
@@ -27,7 +27,7 @@ on:
   
 env:
   REPO_URL: https://github.com/beiyuqu/immortalwrt-mt798x
-  REPO_BRANCH: mt798x-scripts
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/360T7.config
   DIY_P1_SH: script/diy-part1.sh
