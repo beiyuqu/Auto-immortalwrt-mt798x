@@ -33,6 +33,7 @@ env:
   DIY_P1_SH: script/diy-part1.sh
   DIY_P2_SH: script/diy-part5.sh
   SSH_ACTIONS: false
+  UPLOAD_CONFIG: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
