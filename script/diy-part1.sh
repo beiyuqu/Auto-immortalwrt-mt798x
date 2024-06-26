@@ -23,6 +23,12 @@
 #echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+# 添加软件中心
+sed -i '$a src-git istore https://github.com/linkease/istore;main' feeds.conf.default 
+./scripts/feeds update istore
+./scripts/feeds install -d y -p istore luci-app-store
+
+# 添加最新软件源，包含科学上网等常用软件
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
