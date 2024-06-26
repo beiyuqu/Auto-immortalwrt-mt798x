@@ -12,6 +12,9 @@
 # 修改openwrt登陆地址,把下面的192.168.111.1修改成你想要的就可以了
 sed -i 's/192.168.1.1/192.168.111.1/g' package/base-files/files/bin/config_generate
 
+#2. 清除登录密码
+sudo sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' ./package/lean/default-settings/files/zzz-default-settings
+
 # 修改主机名字，把360修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i 's/ImmortalWrt/360T7/g' package/base-files/files/bin/config_generate
 
